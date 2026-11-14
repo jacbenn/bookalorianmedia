@@ -174,7 +174,6 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .link-list a:hover { border-color: var(--pink); }
 
 /* EPISODES */
-.episodes-link { margin-top: 1.4rem; }
 .episodes-section { padding-top: 1rem; }
 .episode-status { text-align: center; color: var(--muted); }
 .episode-status--error { color: var(--pink-soft); margin-bottom: 1.2rem; }
@@ -195,22 +194,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 #episode-more { margin-top: 2rem; }
 [hidden] { display: none !important; }
 
-/* SOCIALS */
-.social-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.6rem; }
-.social {
-  display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
-  padding: 1.6rem 1rem; border-radius: 16px; border: 1px solid var(--line);
-  font-family: var(--display); font-weight: 700; font-size: 1.35rem; background: rgba(20, 12, 17, 0.7);
-  transition: background .2s, transform .2s, border-color .2s;
-}
-.social .social-icon { width: 52px; height: 52px; padding: 10px; margin-bottom: 0.5rem; border-radius: 50%; background: var(--cream); }
-.social span { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
-.social:hover { background: rgba(255, 45, 138, 0.12); border-color: var(--pink); transform: translateY(-3px); }
-
 /* FOOTER */
 .footer { text-align: center; padding: 2.2rem 1rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); }
-.footer-brand { font-family: var(--brush); font-size: 2rem; color: var(--cream); }
-.footer-brand span { color: var(--pink); }
 .footer-socials { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.4rem; }
 .footer-social {
   display: flex; align-items: center; justify-content: center;
@@ -255,7 +240,6 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .hero + .section { padding-top: 1.25rem; }
   .episode { grid-template-columns: 1fr; }
   .episode-art { width: 140px; height: 140px; }
-  .social-row { grid-template-columns: 1fr; }
   .podcast { gap: 1.25rem; }
   .page-hero + .podcast { padding-top: 1rem; }
   .podcast-art { max-width: 200px; margin: 0 auto; }
@@ -266,8 +250,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .platform { justify-content: center; text-align: center; padding: 0.75rem 0.4rem; font-size: 0.85rem; line-height: 1.25; }
   .platform:hover { transform: translateY(-2px); }
   .platform .arrow { display: none; }
-  .episodes-link { margin-top: 1rem; }
-}
+  }
 @media (max-width: 560px) {
   .nav { justify-content: center; }
   .nav nav { gap: 0.9rem; justify-content: center; }
