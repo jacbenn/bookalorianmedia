@@ -22,8 +22,8 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Check links, files and images
+      - name: Check pages, links, files and menu
         run: npm run check
 
       - name: Validate HTML
-        run: npx --yes html-validate@9 index.html
+        run: npx --yes html-validate@9 "*.html"
