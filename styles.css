@@ -108,17 +108,18 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .btn-lg { padding: 1.1rem 2.2rem; font-size: 0.95rem; }
 
 /* PODCAST */
-.podcast { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.podcast { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; justify-content: center; max-width: 1000px; }
+.page-hero + .podcast { padding-top: clamp(1.25rem, 3vw, 2rem); }
 .podcast-art img {
   width: 100%; height: auto; display: block; border-radius: 18px;
   box-shadow: 0 0 0 1px var(--line), 0 30px 80px rgba(255, 45, 138, 0.25);
 }
 .sub { font-family: var(--serif); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.85rem; color: var(--muted); margin: -0.4rem 0 1rem; }
 .podcast-copy > p:not(.eyebrow):not(.sub) { color: var(--muted); margin-bottom: 1.6rem; }
-.platforms { display: grid; gap: 0.75rem; }
+.platforms { display: grid; gap: 0.6rem; }
 .platform {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 1rem 1.3rem; border: 1px solid var(--line); border-radius: 12px;
+  padding: 0.85rem 1.2rem; border: 1px solid var(--line); border-radius: 12px;
   background: rgba(20, 12, 17, 0.7); font-weight: 600;
   transition: border-color .2s, background .2s, transform .2s;
 }
@@ -127,11 +128,12 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 
 /* PAGE HERO (inner pages) */
 .page-hero {
-  text-align: center; padding: clamp(2.5rem, 6vw, 4rem) 1.2rem clamp(0.5rem, 2vw, 1rem);
+  text-align: center; padding: clamp(1.5rem, 3.5vw, 2.5rem) 1.2rem 0;
   max-width: 900px; margin: 0 auto;
 }
 .page-hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
-.page-hero .sub { margin: 0.6rem 0 0; }
+.page-hero .sub { margin: 0.4rem 0 0; }
+.page-hero .eyebrow { margin-bottom: 0.4rem; }
 .page-hero .tagline { margin-bottom: 2rem; }
 .page-hero-logo { display: block; width: min(300px, 70vw); height: auto; margin: 0.5rem auto -1.5rem; mix-blend-mode: lighten; }
 .page-hero-art { display: block; width: min(320px, 75vw); height: auto; margin: 1.5rem auto 0.5rem; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 20px 60px rgba(255, 45, 138, 0.2); }
@@ -232,6 +234,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .tile img { aspect-ratio: 2 / 1; margin-bottom: 0.4rem; }
   .tile-title { font-size: 1.3rem; }
   .tile-copy { font-size: 0.92rem; line-height: 1.45; }
+  .podcast { grid-template-columns: minmax(0, 330px) minmax(0, 1fr); }
+  .page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
 }
 
 @media (max-width: 800px) {
@@ -251,7 +255,17 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .episode { grid-template-columns: 1fr; }
   .episode-art { width: 140px; height: 140px; }
   .social-row { grid-template-columns: 1fr; }
-  .podcast-art { max-width: 420px; margin: 0 auto; }
+  .podcast { gap: 1.25rem; }
+  .page-hero + .podcast { padding-top: 1rem; }
+  .podcast-art { max-width: 200px; margin: 0 auto; }
+  .podcast-copy { text-align: center; }
+  .podcast-copy h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .podcast-copy > p:not(.eyebrow):not(.sub) { margin-bottom: 1rem; font-size: 0.95rem; }
+  .platforms { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .platform { justify-content: center; text-align: center; padding: 0.75rem 0.4rem; font-size: 0.85rem; line-height: 1.25; }
+  .platform:hover { transform: translateY(-2px); }
+  .platform .arrow { display: none; }
+  .episodes-link { margin-top: 1rem; }
 }
 @media (max-width: 560px) {
   .nav { justify-content: center; }
