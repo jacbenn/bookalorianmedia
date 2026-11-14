@@ -4,8 +4,8 @@
 // To change the feed, set PODCAST_FEED_URL in Vercel (Settings → Environment
 // Variables) or change DEFAULT_FEED_URL below.
 
-// RedCircle feed. Swap for the Litdulterous show's RedCircle feed when it's set up.
-const DEFAULT_FEED_URL = 'https://feeds.redcircle.com/9ccccbc5-a7b3-460b-91b6-9876376e8038';
+// Litdulterous on RedCircle.
+const DEFAULT_FEED_URL = 'https://feeds.redcircle.com/38ee7607-1617-4a84-8ca9-60f714ae0b0e';
 
 const CACHE_MS = 15 * 60 * 1000;
 let cache = { at: 0, url: '', data: null };
