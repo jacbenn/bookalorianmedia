@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Test Show</title>
+    <itunes:image href="https://example.com/show.jpg"/>
+    <item>
+      <itunes:title>Older Episode &amp; Friends</itunes:title>
+      <title>Older Episode &amp; Friends</title>
+      <itunes:episode>1</itunes:episode>
+      <pubDate>Tue, 03 Nov 2026 12:32:13 +0000</pubDate>
+      <enclosure url="https://example.com/1.mp3" length="1" type="audio/mpeg"/>
+      <itunes:duration>51:54</itunes:duration>
+      <itunes:explicit>true</itunes:explicit>
+      <description>&lt;p&gt;Three books.&lt;/p&gt;&lt;p&gt;We&#39;d never trust them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title><![CDATA[Newest Episode: Twists <Explained>]]></title>
+      <itunes:episode>2</itunes:episode>
+      <pubDate>Tue, 10 Nov 2026 12:55:45 +0000</pubDate>
+      <enclosure url="https://example.com/2.mp3" length="1" type="audio/mpeg"/>
+      <itunes:duration>3114</itunes:duration>
+      <itunes:image href="https://example.com/2.jpg"/>
+      <content:encoded><![CDATA[<h1><br></h1><p>A girls' weekend <b>goes wrong</b>.</p><script>alert(1)</script>]]></content:encoded>
+    </item>
+    <item>
+      <title>Trailer with no audio</title>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

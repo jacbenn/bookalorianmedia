@@ -184,6 +184,28 @@ h3 { font-family: var(--brush); font-weight: 400; font-size: 2.2rem; line-height
 .link-list a span { font-weight: 400; font-size: 0.85rem; color: var(--muted); text-align: right; }
 .link-list a:hover { border-color: var(--pink); }
 
+/* EPISODES */
+.episodes-link { margin-top: 1.4rem; }
+.episodes-section { padding-top: 1rem; }
+.episode-status { text-align: center; color: var(--muted); }
+.episode-status--error { color: var(--pink-soft); margin-bottom: 1.2rem; }
+.episode-list { display: grid; gap: 1.2rem; }
+.episode {
+  display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 1.5rem; align-items: start;
+  padding: 1.4rem; border-radius: 18px; border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(255, 45, 138, 0.07), rgba(20, 12, 17, 0.85) 45%);
+}
+.episode-art { width: 160px; height: 160px; object-fit: cover; border-radius: 12px; }
+.episode-meta { font-family: var(--serif); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink-soft); }
+.episode-title { font-family: var(--sans); font-weight: 600; font-size: 1.25rem; line-height: 1.35; text-shadow: none; margin: 0.4rem 0 0.6rem; }
+.episode-summary { color: var(--muted); }
+.episode-notes { margin-top: 0.6rem; color: var(--muted); }
+.episode-notes summary { cursor: pointer; color: var(--pink); font-weight: 600; font-size: 0.9rem; }
+.episode-notes p { margin-top: 0.7rem; }
+.episode-audio { width: 100%; margin-top: 1rem; color-scheme: dark; }
+#episode-more { margin-top: 2rem; }
+[hidden] { display: none !important; }
+
 /* SOCIALS */
 .social-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.2rem; }
 .social {
@@ -215,11 +237,17 @@ h3 { font-family: var(--brush); font-weight: 400; font-size: 2.2rem; line-height
 @media (max-width: 800px) {
   .podcast, .cards, .tiles { grid-template-columns: 1fr; }
   .tile img, .tile-art { max-width: 320px; width: 100%; }
+  .episode { grid-template-columns: 1fr; }
+  .episode-art { width: 140px; height: 140px; }
   .social-row { grid-template-columns: 1fr; }
   .podcast-art { max-width: 420px; margin: 0 auto; }
 }
 @media (max-width: 560px) {
   .nav { justify-content: center; }
+  .nav nav { gap: 0.9rem; justify-content: center; }
+  .nav nav a { font-size: 0.66rem; letter-spacing: 0.1em; }
   .link-list a { flex-direction: column; gap: 0.1rem; }
   .link-list a span { text-align: left; }
 }
+button.btn { cursor: pointer; background: transparent; }
+button.btn-ghost { color: var(--cream); }

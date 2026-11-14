@@ -1,5 +1,7 @@
+server.js
 README.md
+.env.example
 .github
 scripts
-package.json
+tests
 .nvmrc

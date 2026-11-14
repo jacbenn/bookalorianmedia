@@ -22,6 +22,15 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
+      - name: Check server and episode code
+        run: |
+          node --check server.js
+          node --check api/episodes.js
+          node --check episodes.js
+
+      - name: Test the episode feed reader
+        run: npm test
+
       - name: Check pages, links, files and menu
         run: npm run check
 
