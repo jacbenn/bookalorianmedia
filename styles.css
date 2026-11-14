@@ -136,7 +136,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .page-hero .eyebrow { margin-bottom: 0.4rem; }
 .page-hero .tagline { margin-bottom: 2rem; }
 .page-hero-logo { display: block; width: min(300px, 70vw); height: auto; margin: 0.5rem auto -1.5rem; mix-blend-mode: lighten; }
-.page-hero-art { display: block; width: min(320px, 75vw); height: auto; margin: 1.5rem auto 0.5rem; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 20px 60px rgba(255, 45, 138, 0.2); }
+.page-hero-art { display: block; width: min(260px, 60vw); height: auto; margin: 1.1rem auto 0.25rem; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 20px 60px rgba(255, 45, 138, 0.2); }
 .page-hero--tall { min-height: 55vh; display: flex; flex-direction: column; justify-content: center; }
 
 /* HOME TILES */
@@ -236,6 +236,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .tile-copy { font-size: 0.92rem; line-height: 1.45; }
   .podcast { grid-template-columns: minmax(0, 330px) minmax(0, 1fr); }
   .page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+  .page-hero-art { width: 210px; margin-top: 0.8rem; }
 }
 
 @media (max-width: 800px) {
