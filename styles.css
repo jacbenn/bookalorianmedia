@@ -226,6 +226,21 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .footer-social .social-icon { width: 20px; height: 20px; }
 .footer .small { justify-self: end; font-size: 0.8rem; opacity: 0.7; }
 
+/* HOME: tiles grow to fill the screen above the footer (desktop) */
+@media (min-width: 801px) {
+  main:has(> .tiles-section) { display: flex; flex-direction: column; }
+  main > .hero { width: 100%; }
+  .tiles-section { flex: 1; display: flex; flex-direction: column; width: 100%; }
+  .tiles-section .tiles { flex: 1; }
+  .tiles-section .tile img { flex: 1 1 0; min-height: 150px; max-height: 420px; height: auto; aspect-ratio: auto; }
+  .tiles-section .tile-copy { flex: 0 0 auto; }
+
+  /* Litdulterous artwork and Shop picture sized to the screen height */
+  main > .podcast { grid-template-columns: auto minmax(0, 1fr); }
+  main > .podcast .podcast-art img { width: clamp(260px, calc(100vh - 360px), 520px); }
+  main > .page-hero .page-hero-art { width: clamp(200px, calc(100vh - 475px), 420px); }
+}
+
 /* RESPONSIVE */
 /* Short laptop screens: keep the intro and tiles in the first view */
 @media (max-height: 860px) and (min-width: 801px) {
