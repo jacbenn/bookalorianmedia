@@ -153,6 +153,7 @@ h3 { font-family: var(--brush); font-weight: 400; font-size: 2.2rem; line-height
   padding: 2rem; border-radius: 18px; border: 1px solid var(--line);
   background: linear-gradient(160deg, rgba(255, 45, 138, 0.08), rgba(20, 12, 17, 0.85) 45%);
 }
+.card-art { display: block; width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.4rem; background: #000; box-shadow: 0 0 0 1px var(--line); }
 .card-title { font-size: 2.4rem; margin-bottom: 0; text-shadow: none; }
 .card-sub { font-family: var(--serif); font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink-soft); margin: 0.3rem 0 0.9rem; }
 .card > p:not(.card-sub) { color: var(--muted); margin-bottom: 1.4rem; }
