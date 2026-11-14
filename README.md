@@ -10,18 +10,31 @@ Website for Bookalorian Media: books, comedy and bookish merch.
 ## Structure
 
 ```
-index.html        page content and all links
-styles.css        styling (dark background, hot pink, smoke haze)
-assets/           podcast artwork and favicon
+index.html            page content and all links
+styles.css            styling (dark background, hot pink, smoke haze)
+assets/               podcast artwork and favicon
+scripts/check.mjs     site checks (files exist, https links, alt text, in-page links)
+.github/workflows/    CI: runs the checks and an HTML validator on every push and PR
+vercel.json           Vercel config (static site, no build step)
 ```
 
-It's plain HTML and CSS with no build step. Open `index.html` in a browser to preview it.
+It's plain HTML and CSS with no build step.
 
-## Hosting on GitHub Pages
+## Running locally
 
-1. Push to GitHub.
-2. Go to **Settings → Pages**, set the source to the `main` branch, root folder.
-3. The site goes live at `https://<username>.github.io/bookalorianmedia/`.
+```bash
+npm start        # serves the site at http://localhost:3000
+npm run check    # runs the same checks as CI
+```
+
+## Deploying
+
+The site deploys on Vercel, like slayandspillmedia:
+
+1. Push the repo to GitHub.
+2. In Vercel, choose **Add New → Project** and import `bookalorianmedia`. The settings come from `vercel.json`, so nothing needs changing.
+3. Every push to `main` deploys to production, and pull requests get preview links.
+4. To use a custom domain, add it under **Settings → Domains** in Vercel.
 
 ## Editing links
 

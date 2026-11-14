@@ -1,0 +1,10 @@
+{
+  "name": "bookalorianmedia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bookalorian Media website: Litdulterous podcast, Bookalorian Designs merch, After the Slay and After the Book Spill",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "start": "npx --yes serve ."
+  }
+}
