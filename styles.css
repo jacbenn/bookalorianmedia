@@ -130,8 +130,7 @@ h3 { font-family: var(--brush); font-weight: 400; font-size: 2.2rem; line-height
 .page-hero h1 { font-size: clamp(3.4rem, 11vw, 6.5rem); }
 .page-hero .sub { margin: 0.8rem 0 0; }
 .page-hero .tagline { margin-bottom: 2rem; }
-.page-hero-logo { margin: 0 auto; line-height: 0; }
-.page-hero-logo img { width: min(380px, 80vw); height: auto; margin: -2rem 0 -2.5rem; mix-blend-mode: lighten; }
+.page-hero-logo { display: block; width: min(300px, 70vw); height: auto; margin: 0.5rem auto -1.5rem; mix-blend-mode: lighten; }
 .page-hero--tall { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; }
 
 /* HOME TILES */
