@@ -4,7 +4,7 @@
 // To change the feed, set PODCAST_FEED_URL in Vercel (Settings → Environment
 // Variables) or change DEFAULT_FEED_URL below.
 
-// Placeholder: this is currently the Book Slayers feed until the Litdulterous one is added.
+// RedCircle feed. Swap for the Litdulterous show's RedCircle feed when it's set up.
 const DEFAULT_FEED_URL = 'https://feeds.redcircle.com/9ccccbc5-a7b3-460b-91b6-9876376e8038';
 
 const CACHE_MS = 15 * 60 * 1000;

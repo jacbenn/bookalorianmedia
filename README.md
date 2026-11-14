@@ -39,7 +39,7 @@ It's plain HTML and CSS with no build step and nothing to install. Links use roo
 
 ## Changing the podcast feed
 
-The Episodes page reads the feed set in `api/episodes.js` (`DEFAULT_FEED_URL`). **It's currently a placeholder using the Book Slayers feed.** To switch to the Litdulterous feed, either:
+The Episodes page reads the feed set in `api/episodes.js` (`DEFAULT_FEED_URL`). It uses a RedCircle feed (currently the Book Slayers show, for testing). To point it at a different feed, either:
 
 - change `DEFAULT_FEED_URL` in `api/episodes.js`, or
 - set `PODCAST_FEED_URL` in Vercel under **Settings → Environment Variables** (and in a local `.env` file, see `.env.example`).
