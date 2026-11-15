@@ -200,7 +200,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 /* SLAY & SPILL CARDS: compact so the page fits one screen */
 .page-hero + .cards-section { padding-top: clamp(1rem, 2.5vw, 1.5rem); }
 .cards-section .cards { margin-top: 0; gap: 1.2rem; max-width: 960px; margin-inline: auto; }
-.cards-section .card { padding: 1.1rem 1.1rem 1.2rem; }
+.cards-section .card { padding: 1.1rem 1.1rem 1.2rem; display: flex; flex-direction: column; }
+.cards-section .link-list { margin-top: auto; }
 .cards-section .card-art { aspect-ratio: 2 / 1; object-fit: contain; margin-bottom: 0.9rem; }
 .cards-section .card-title { font-size: 1.6rem; }
 .cards-section .card-sub { margin: 0.2rem 0 0.5rem; }
