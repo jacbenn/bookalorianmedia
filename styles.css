@@ -202,6 +202,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .cards-section .cards { margin-top: 0; gap: 1.2rem; max-width: 960px; margin-inline: auto; }
 .cards-section .card { padding: 1.1rem 1.1rem 1.2rem; display: flex; flex-direction: column; }
 .cards-section .link-list { margin-top: auto; }
+.cards-section .link-list li { display: flex; }
+.cards-section .link-list a { flex: 1; justify-content: center; }
 .cards-section .card-art { aspect-ratio: 2 / 1; object-fit: contain; margin-bottom: 0.9rem; }
 .cards-section .card-title { font-size: 1.6rem; }
 .cards-section .card-sub { margin: 0.2rem 0 0.5rem; }
@@ -293,6 +295,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .cards-section .card-sub { margin: 0.15rem 0 0.3rem; font-size: 0.68rem; }
   .cards-section .card > p:not(.card-sub) { margin-bottom: 0; font-size: 0.88rem; line-height: 1.4; }
   .cards-section .link-list { grid-column: 1 / -1; margin-top: 0.75rem; }
+  .cards-section .link-list a { min-height: 4.5rem; padding: 0.45rem 0.3rem; }
+  .cards-section .link-list a span { font-size: 0.7rem; line-height: 1.25; }
   .hero { padding-top: 1.5rem; }
   .hero-tagline { font-size: 1rem; margin-top: 0.5rem; }
   .hero + .section { padding-top: 1.25rem; }
