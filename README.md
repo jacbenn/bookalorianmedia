@@ -64,6 +64,14 @@ The site deploys on Vercel, like slayandspillmedia:
 3. Every push to `main` deploys to production, and pull requests get preview links.
 4. To use a custom domain, add it under **Settings → Domains** in Vercel.
 
+## Analytics
+
+Google Analytics (GA4), set up like the Betty & Bonny site. Put the measurement ID in `analytics.js` (`GA_ID`); while it's empty nothing is tracked.
+
+- Page views and visitor sources on every page
+- Clicks out to Spotify, Etsy, Patreon and so on (GA4's automatic "outbound clicks")
+- Episodes page: `episode_play`, `episode_pause`, `episode_progress` (25/50/75%) and `episode_completed`
+
 ## Editing links
 
 All links are in `index.html`. Search for the platform name (e.g. `patreon`) to find each one.

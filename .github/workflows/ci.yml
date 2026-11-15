@@ -27,6 +27,7 @@ jobs:
           node --check server.js
           node --check api/episodes.js
           node --check episodes.js
+          node --check analytics.js
 
       - name: Test the episode feed reader
         run: npm test

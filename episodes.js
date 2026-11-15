@@ -63,10 +63,32 @@
     audio.preload = 'none';
     audio.src = ep.audio;
     audio.setAttribute('aria-label', `Play ${ep.title}`);
+    trackAudio(audio, ep);
     body.append(audio);
 
     article.append(body);
     return article;
+  }
+
+  // Episode tracking, same events as the Betty & Bonny site.
+  function trackAudio(audio, ep) {
+    const track = window.trackEvent || function () {};
+    const sent = new Set();
+    audio.addEventListener('play', () => track('episode_play', { episode_id: ep.id, episode_title: ep.title }));
+    audio.addEventListener('pause', () => {
+      if (!audio.ended) track('episode_pause', { episode_id: ep.id, current_time: Math.round(audio.currentTime) });
+    });
+    audio.addEventListener('ended', () => track('episode_completed', { episode_id: ep.id, episode_title: ep.title, duration: Math.round(audio.duration) }));
+    audio.addEventListener('timeupdate', () => {
+      if (!audio.duration) return;
+      const pct = (audio.currentTime / audio.duration) * 100;
+      [25, 50, 75].forEach((m) => {
+        if (pct >= m && !sent.has(m)) {
+          sent.add(m);
+          track('episode_progress', { episode_id: ep.id, progress_percent: m });
+        }
+      });
+    });
   }
 
   function showMore() {
