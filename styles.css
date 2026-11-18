@@ -216,7 +216,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .cards-section .link-list a:hover { border-color: var(--pink); background: rgba(255, 45, 138, 0.14); }
 
 /* Slay & Spill links as round icons (like the footer) */
-.cards-section .link-list { display: flex; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap; }
+.cards-section .link-list { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; }
 .cards-section .link-list li { flex: none; }
 .cards-section .link-list a,
 .cards-section .link-list a:hover {
@@ -314,7 +314,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .cards-section .card-sub { margin: 0.15rem 0 0.3rem; font-size: 0.68rem; }
   .cards-section .card > p:not(.card-sub) { margin-bottom: 0; font-size: 0.88rem; line-height: 1.4; }
   .cards-section .link-list { grid-column: 1 / -1; margin-top: 0.75rem; }
-  .cards-section .link-list { justify-content: space-between; gap: 0.5rem; }
+  .cards-section .link-list { justify-content: center; gap: 0.9rem; }
   .hero { padding-top: 1.5rem; }
   .hero-tagline { font-size: 1rem; margin-top: 0.5rem; }
   .hero + .section { padding-top: 1.25rem; }
