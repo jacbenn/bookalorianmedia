@@ -215,6 +215,24 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 .cards-section .link-list a { border: 1px solid rgba(255, 45, 138, 0.65); background: rgba(255, 45, 138, 0.1); }
 .cards-section .link-list a:hover { border-color: var(--pink); background: rgba(255, 45, 138, 0.14); }
 
+/* Slay & Spill links as round icons (like the footer) */
+.cards-section .link-list { display: flex; justify-content: flex-start; gap: 1.4rem; }
+.cards-section .link-list li { flex: none; }
+.cards-section .link-list a,
+.cards-section .link-list a:hover {
+  flex-direction: column; gap: 0.35rem; padding: 0; min-height: 0;
+  border: 0; background: none; font-size: 0.78rem; font-weight: 600; color: var(--muted);
+}
+.cards-section .link-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--cream); border: 2px solid var(--pink);
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+.cards-section .link-list .link-icon img { width: 22px; height: 22px; }
+.cards-section .link-list a:hover .link-icon { background: #fff; transform: translateY(-3px); box-shadow: 0 0 20px rgba(255, 45, 138, 0.5); }
+.cards-section .link-list a:hover { color: var(--cream); }
+
 /* FOOTER */
 .footer {
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem;
@@ -296,7 +314,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .cards-section .card-sub { margin: 0.15rem 0 0.3rem; font-size: 0.68rem; }
   .cards-section .card > p:not(.card-sub) { margin-bottom: 0; font-size: 0.88rem; line-height: 1.4; }
   .cards-section .link-list { grid-column: 1 / -1; margin-top: 0.75rem; }
-  .cards-section .link-list a { min-height: 2.9rem; min-width: 0; padding: 0.5rem 0.25rem; gap: 0.35rem; font-size: 0.85rem; }
+  .cards-section .link-list { justify-content: center; gap: 1.6rem; }
   .hero { padding-top: 1.5rem; }
   .hero-tagline { font-size: 1rem; margin-top: 0.5rem; }
   .hero + .section { padding-top: 1.25rem; }
