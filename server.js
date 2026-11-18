@@ -36,6 +36,7 @@ try {
 } catch {}
 
 const episodes = require('./api/episodes.js');
+const booking = require('./api/booking.js');
 
 function send(res, status, file) {
   fs.readFile(file, (err, data) => {
@@ -58,6 +59,19 @@ const server = http.createServer(async (req, res) => {
   } catch {
     res.writeHead(400);
     return res.end('Bad request');
+  }
+
+  if (urlPath === '/api/booking' && req.method === 'POST') {
+    let raw = '';
+    req.on('data', (c) => { raw += c; if (raw.length > 20000) req.destroy(); });
+    req.on('end', async () => {
+      let body = {};
+      try { body = JSON.parse(raw); } catch {}
+      const out = await booking.handle(body);
+      res.writeHead(out.status, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify(out.json));
+    });
+    return;
   }
 
   if (urlPath === '/api/episodes') {

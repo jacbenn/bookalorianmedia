@@ -15,6 +15,7 @@ Website for Bookalorian Media: books, comedy and bookish merch.
 | `/podcast` | `podcast.html` | Litdulterous and its listen links |
 | `/episodes` | `episodes.html` + `episodes.js` | Every Litdulterous episode with a player, loaded from the RSS feed |
 | `/shop` | `shop.html` | Bookalorian Designs and the Etsy link |
+| `/podcast-services` | `podcast-services.html` + `services.js` | Podcast coaching & production: Riverside recording, packages, coaching, FAQ and the booking form (not in the menu; linked from the home page button) |
 | `/slay-and-spill` | `slay-and-spill.html` | Book Slayers and Spill the Book, their Patreon and Substack (After the Slay, After the Book Spill), and Slay & Spill Media |
 | any other address | `404.html` | Page not found |
 
@@ -63,6 +64,18 @@ The site deploys on Vercel, like slayandspillmedia:
 2. In Vercel, choose **Add New → Project** and import `bookalorianmedia`. The settings come from `vercel.json`, so nothing needs changing.
 3. Every push to `main` deploys to production, and pull requests get preview links.
 4. To use a custom domain, add it under **Settings → Domains** in Vercel.
+
+## Booking form (podcast services)
+
+The form at the bottom of `/podcast-services` sends requests to `/api/booking` (`api/booking.js`), which emails them through Resend, the same way as the influencer sign-up on the Slay & Spill Media site. Every "Book…" button on the page jumps to the form with that service already chosen.
+
+Set these in Vercel → Settings → Environment Variables (and in `.env` for `npm start`):
+
+- `RESEND_API_KEY`: a Resend API key
+- `RESEND_FROM_EMAIL`: a sender address on a domain verified in Resend
+- `CONTACT_EMAIL`: where requests go (optional; defaults to info@bookalorianmedia.com)
+
+Until the key is set, the form tells visitors to email info@bookalorianmedia.com instead.
 
 ## Analytics
 

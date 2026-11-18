@@ -28,6 +28,8 @@ jobs:
           node --check api/episodes.js
           node --check episodes.js
           node --check analytics.js
+          node --check services.js
+          node --check api/booking.js
 
       - name: Test the episode feed reader
         run: npm test

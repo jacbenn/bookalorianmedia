@@ -60,8 +60,12 @@ for (const page of pages) {
     continue;
   }
   const current = [...nav.matchAll(/href="([^"]+)"[^>]*aria-current="page"/g)].map((m) => m[1]);
-  if (page !== '404.html' && (current.length !== 1 || current[0] !== route)) {
+  const inMenu = nav.includes(`href="${route}"`);
+  if (page !== '404.html' && inMenu && (current.length !== 1 || current[0] !== route)) {
     errors.push(`${page}: menu should highlight ${route}, highlights ${current.join(', ') || 'nothing'}`);
+  }
+  if (!inMenu && current.length) {
+    errors.push(`${page}: not in the menu, so the menu shouldn't highlight ${current.join(', ')}`);
   }
   navs.set(page, nav.replace(/\s*aria-current="page"/g, '').replace(/\s+/g, ' '));
 }
