@@ -314,7 +314,9 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
   .cards-section .card-sub { margin: 0.15rem 0 0.3rem; font-size: 0.68rem; }
   .cards-section .card > p:not(.card-sub) { margin-bottom: 0; font-size: 0.88rem; line-height: 1.4; }
   .cards-section .link-list { grid-column: 1 / -1; margin-top: 0.75rem; }
-  .cards-section .link-list { justify-content: center; gap: 0.9rem; }
+  .cards-section .link-list { justify-content: center; gap: 0.55rem; flex-wrap: nowrap; }
+  .cards-section .link-icon { width: 40px; height: 40px; }
+  .cards-section .link-list .link-icon img { width: 20px; height: 20px; }
   .hero { padding-top: 1.5rem; }
   .hero-tagline { font-size: 1rem; margin-top: 0.5rem; }
   .hero + .section { padding-top: 1.25rem; }
@@ -344,3 +346,10 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-heig
 }
 button.btn { cursor: pointer; background: transparent; }
 button.btn-ghost { color: var(--cream); }
+
+/* Very small phones: keep each card's six icons on one row */
+@media (max-width: 360px) {
+  .cards-section .link-list { gap: 0.4rem; }
+  .cards-section .link-icon { width: 36px; height: 36px; }
+  .cards-section .link-list .link-icon img { width: 18px; height: 18px; }
+}
